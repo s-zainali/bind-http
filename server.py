@@ -246,7 +246,7 @@ def cmd():
                 pass
             return render_template_string(str(soup))
 
-        elif command[:3]== 'pwd':
+        elif command[:3].lower() == 'pwd':
             div_after_command(data=os.getcwd(), special=['nopath'])
             return render_template_string(str(soup))
 
